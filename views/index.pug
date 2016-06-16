@@ -1,0 +1,25 @@
+html
+  head
+    title= title
+    link(rel="stylesheet" type="text/css" href="public/style.css")
+  body
+    h1.page-title= message
+    form.page-form
+      section.form-section
+        label.small-label.url-label URL
+        input.url-input(type="text" name="url")
+      section.form-section
+        .inline-input.inline-input--small
+          label.small-label.select-label METHOD
+          select.form-select(name="method")
+            option GET
+            option POST
+            option PUT
+        .inline-input.inline-input--medium
+          label.small-label.number-label REQUESTS
+          input.number-input(type="number" name="requests")
+        .inline-input.inline-input--medium
+          label.small-label.number-label PARALLEL
+          input.number-input(type="number" name="parallelism")
+      section.form-section.form-section--footer
+        button.form-submit(type="submit") Enviar

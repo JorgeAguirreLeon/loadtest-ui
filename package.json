@@ -1,0 +1,21 @@
+{
+  "name": "testload-ui",
+  "version": "1.0.0",
+  "description": "Basic UI for loadtest",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "npm test"
+  },
+  "keywords": [
+    "ui",
+    "loadtest"
+  ],
+  "author": "Jorge Aguirre",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4",
+    "loadtest": "^1.4.3",
+    "pug": "^2.0.0-beta3"
+  }
+}
