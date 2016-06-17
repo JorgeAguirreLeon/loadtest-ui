@@ -49,3 +49,30 @@ body {
 .inline-input.inline-input--medium {
   width: 40%;
 }
+
+.url-input {
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 1.5em;
+  padding: 12px 20px;
+  width: 100%;
+}
+
+.url-label {
+  margin-left: 20px;
+}
+
+.form-select {
+  background: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: #282828;
+  display: inline-block;
+  margin: 0 auto;
+  outline: none;
+  padding: 12px;
+  width: 90%;
+}
+.select-label {
+  margin-left: 20px;
+}
