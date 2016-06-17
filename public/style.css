@@ -43,11 +43,19 @@ body {
 }
 
 .inline-input.inline-input--small {
+  box-sizing: border-box;
+  padding-right: 20px;
   width: 20%;
 }
 
 .inline-input.inline-input--medium {
+  box-sizing: border-box;
+  padding: 0 20px;
   width: 40%;
+}
+
+.inline-input.inline-input--medium:last-child {
+  padding-right: 0;
 }
 
 .url-input {
@@ -68,11 +76,23 @@ body {
   border-radius: 4px;
   color: #282828;
   display: inline-block;
-  margin: 0 auto;
+  font-size: 1.5em;
   outline: none;
   padding: 12px;
-  width: 90%;
+  width: 100%;
 }
 .select-label {
+  margin-left: 20px;
+}
+
+.number-input {
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 1.5em;
+  padding: 12px 20px;
+  width: 100%;
+}
+
+.number-label {
   margin-left: 20px;
 }
