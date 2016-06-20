@@ -4,7 +4,7 @@ html
     link(rel="stylesheet" type="text/css" href="public/style.css")
   body
     h1.page-title= message
-    form.page-form
+    form.page-form(method="post" action="/")
       section.form-section
         label.small-label.url-label URL
         input.url-input(type="text" name="url" placeholder="http://www...")
