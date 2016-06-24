@@ -1,0 +1,42 @@
+html
+  head
+    title= title
+    link(rel="stylesheet" type="text/css" href="public/style.css")
+  body
+    h1.results-title Results from testload
+    .data-panel
+      .data-block
+        .heading requests
+        .value #{result.totalRequests} requests
+      .data-block
+        .heading errors
+        .value #{result.totalErrors} errors
+      .data-block
+        .heading total time
+        .value #{result.totalTimeSeconds} s
+      .data-block
+        .heading RPS
+        .value #{result.rps} rps
+      br
+      .data-block
+        .heading min latency
+        .value #{result.meanLatencyMs} ms
+      .data-block
+        .heading mean latency
+        .value #{result.maxLatencyMs} ms
+      .data-block
+        .heading max latency
+        .value #{result.minLatencyMs} ms
+    .percentiles.data-panel
+      h3.data-block-title Percentiles
+      each val in ['50', '90', '95', '99']
+        .data-block
+          .heading #{val}% of requests solved in under
+          .value #{result.percentiles[val]} ms
+    if errors
+      .errorCodes.data-panel
+        h3.data-block-title Error codes
+        each value, key in result.errorCodes
+          .data-block
+            .heading Error code #{key}% returned
+            .value #{value} times
